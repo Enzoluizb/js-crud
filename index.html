@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRUD de Petshop</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <img src="./img/icon.png" alt="Icone Pet" />
+      <h1>Cadastro de Pets</h1>
+      <form id="crudForm">
+        <input type="hidden" id="editIndex" value="-1" />
+        <p id="editMessage" style="display: none; color: red">Modo de Edição</p>
+        <input type="text" id="petName" placeholder="Nome do Pet" required />
+        <input
+          type="text"
+          id="species"
+          placeholder="Espécie (Ex: Cachorro, Gato)"
+          required
+        />
+        <input type="number" id="age" placeholder="Idade (anos)" required />
+        <button type="submit">Salvar</button>
+      </form>
+    </div>
+    <div class="table-card">
+      <table>
+        <thead>
+          <tr>
+            <th>Nome do Pet</th>
+            <th>Espécie</th>
+            <th>Idade</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody id="crudTableBody"></tbody>
+      </table>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
